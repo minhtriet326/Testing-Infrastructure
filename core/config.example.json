@@ -1,0 +1,18 @@
+{
+  "Driver": {
+    "Type": "Firefox",
+    "Headless": false,
+    "Width": 1920,
+    "Height": 1080,
+    "Arguments": [],
+    "DownloadPath": "downloads"
+  },
+  "Api": {
+    "BaseUrl": "https://login.pearson.com/v1/piapi/iesui/signin"
+  },
+  "Auth": {
+    "Username": "20522057",
+    "Password": "1570748145",
+    "Url": "https://login.pearson.com/v1/piapi/iesui/signin"
+  }
+}
