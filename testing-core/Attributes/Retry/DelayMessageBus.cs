@@ -25,7 +25,10 @@ namespace testing_core.Attributes.Retry
         // Thay vì chuyển đi, ta chỉ Add vào danh sách messages để giữ lại. Đây là chỗ “trì hoãn” thật sự.
         public bool QueueMessage(IMessageSinkMessage message)
         {
-            messages.Add(message);
+            lock (messages) // lock đảm bảo mỗi lúc chỉ một thread được Add khi có nhiều test chạy song song
+            {
+                messages.Add(message); 
+            }
             return true; // luôn trả về true để xUnit tiếp tục chạy test và gửi message vào bus này
         }
 

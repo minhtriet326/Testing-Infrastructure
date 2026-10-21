@@ -81,7 +81,7 @@ namespace testing_core.Attributes.Retry
                 // RunSummary có field Failed đếm số test fail. Bằng 0 nghĩa là lần này pass
                 // ExceptionAggregator là cái “giỏ” xUnit dùng để gom các exception xảy ra ở tầng hạ tầng
                 // Dừng luôn khi "giỏ" có ex, vì ta dùng chung 1 "giỏ" nên nếu có ex thì các lần chạy sau vô nghĩa.
-                if (aggregator.HasExceptions || summary.Failed == 0 || ++runCount > maxRetries)
+                if (aggregator.HasExceptions || summary.Failed == 0 || ++runCount >= maxRetries)
                 {
                     delayMessageBus.Dispose(); // truyền msg từ delayMessageBus sang messageBus thật
 

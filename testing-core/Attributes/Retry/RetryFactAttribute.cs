@@ -14,10 +14,6 @@ namespace testing_core.Attributes.Retry
     [XunitTestCaseDiscoverer("testing_core.Attributes.Retry.RetryFactDiscoverer", "testing-core")]
     public class RetryFactAttribute : FactAttribute
     {
-        public int MaxRetries { get; }
-        public RetryFactAttribute(int maxRetries = 3)
-        {
-            MaxRetries = maxRetries;
-        }
+        public int MaxRetries { get; set; }
     }
 }
