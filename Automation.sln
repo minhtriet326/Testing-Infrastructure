@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "core", "core\core.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing-core", "testing-core\testing-core.csproj", "{B63826C1-5A76-42E0-9C15-0D8869CFA548}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing-browser", "testing-browser\testing-browser.csproj", "{5B30485C-C8E7-431D-99AC-390047A3915C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B63826C1-5A76-42E0-9C15-0D8869CFA548}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B63826C1-5A76-42E0-9C15-0D8869CFA548}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B63826C1-5A76-42E0-9C15-0D8869CFA548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B30485C-C8E7-431D-99AC-390047A3915C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B30485C-C8E7-431D-99AC-390047A3915C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B30485C-C8E7-431D-99AC-390047A3915C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B30485C-C8E7-431D-99AC-390047A3915C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
