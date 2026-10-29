@@ -16,7 +16,7 @@ namespace testing_browser.WebDriver
     /// Provides an abstraction layer over <see cref="IWebDriver"/> for interacting with web pages and elements,
     /// enriched with logging and wait support.
     /// </summary>
-    public class WebBrowser
+    public class WebDriver
     {
         /// <summary>
         /// Gets the raw Selenium WebDriver instance.
@@ -35,7 +35,7 @@ namespace testing_browser.WebDriver
         /// </summary>
         protected Actions actions => GetActions(); //should use fresh actions
 
-        public WebBrowser(IWebDriver rawDriver, ITestLogger logger, int timeoutInSeconds = 10)
+        public WebDriver(IWebDriver rawDriver, ITestLogger logger, int timeoutInSeconds = 10)
         {
             RawDriver = rawDriver;
             this.logger = logger;
