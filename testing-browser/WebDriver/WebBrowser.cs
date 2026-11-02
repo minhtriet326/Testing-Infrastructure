@@ -16,7 +16,7 @@ namespace testing_browser.WebDriver
     /// Provides an abstraction layer over <see cref="IWebDriver"/> for interacting with web pages and elements,
     /// enriched with logging and wait support.
     /// </summary>
-    public class WebDriver
+    public class WebBrowser
     {
         /// <summary>
         /// Gets the raw Selenium WebDriver instance.
@@ -35,11 +35,11 @@ namespace testing_browser.WebDriver
         /// </summary>
         protected Actions actions => GetActions(); //should use fresh actions
 
-        public WebDriver(IWebDriver rawDriver, ITestLogger logger, int timeoutInSeconds = 10)
+        public WebBrowser(IWebDriver rawDriver, ITestLogger logger, int timeoutInSeconds = 10)
         {
             RawDriver = rawDriver;
             this.logger = logger;
-            Wait = RawDriver.MakeDriverWait(timeoutInSeconds);
+            Wait = this.MakeDriverWait(timeoutInSeconds);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace testing_browser.WebDriver
         {
             logger.LogInfo($"Finding element {locator}.");
 
-            var element = RawDriver.WaitUntilExist(locator);
+            var element = this.WaitUntilExist(locator);
 
             return new WebElement(RawDriver, element, locator, logger);
         }

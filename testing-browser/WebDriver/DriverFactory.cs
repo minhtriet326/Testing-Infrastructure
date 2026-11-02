@@ -12,14 +12,14 @@ namespace testing_browser.WebDriver
 {
     public class DriverFactory
     {
-        public WebDriver CreateDriver(DriverConfig config, ITestLogger logger)
+        public WebBrowser CreateDriver(DriverConfig config, ITestLogger logger)
         {
             switch (config.Type)
             {
                 case "Chrome":
-                    return new WebDriver(new ChromeDriver(GetChromeOptions(config)), logger);
+                    return new WebBrowser(new ChromeDriver(GetChromeOptions(config)), logger);
                 case "FireFox":
-                    return new WebDriver(new FirefoxDriver(GetFirefoxOptions(config)), logger);
+                    return new WebBrowser(new FirefoxDriver(GetFirefoxOptions(config)), logger);
                 default:
                     throw new ArgumentException($"Unsuppoted browser: {config.Type}.");
             }
